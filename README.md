@@ -9,7 +9,7 @@ HOW TO INSTALL:
 
 step 1: 
 ```
-git clone https://github.com/klestyselymay/UpBox-1.0.git
+git clone https://github.com/klestyselymay/UpBox-srv-1.0.git
 ```
 step 2:
 ```
