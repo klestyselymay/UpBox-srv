@@ -20,3 +20,22 @@ HOW TO USE:
 on 
 ```
 server.json
+```
+it should look like this
+
+```json
+{
+    "commands":
+    [
+        {
+            "test": "echo hello from server"
+        }
+    ],
+
+    "colors":
+    [
+        {
+            "color": "green"
+        }
+    ]
+}
