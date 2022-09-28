@@ -1,2 +1,7 @@
 # UpBox-srv-1.0
 UpBox-srv-1.0 is a server for UpBox-1.0
+
+REQUIREMENTS: you need windows but i will release a linux verision.
+
+python-3.10: https://www.python.org/downloads/release/python-3100/
+
