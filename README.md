@@ -49,7 +49,7 @@ now to use custom commands check the code below
     "commands":
     [
         {
-            "test": "echo hello from server"
+            "test": "echo hello from server",
             "command name": "command output"
         }
     ],
