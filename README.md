@@ -5,6 +5,8 @@ REQUIREMENTS: you need windows but i will release a linux verision.
 
 python-3.10: https://www.python.org/downloads/release/python-3100/
 
+UpBox-1.0: https://github.com/klestyselymay/UpBox-1.0
+
 HOW TO INSTALL:
 
 step 1: 
