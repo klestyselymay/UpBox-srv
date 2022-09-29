@@ -42,6 +42,8 @@ it should look like this
 }
 ```
 
+now to use custom commands check the code below
+
 ```json
 {
     "commands":
