@@ -16,7 +16,7 @@ git clone https://github.com/klestyselymay/UpBox-srv-1.0.git
 
 step 2:
 ```
-cd UpBox-srv-1.0-windows
+cd UpBox-srv-1.0
 ```
 
 step 3:
