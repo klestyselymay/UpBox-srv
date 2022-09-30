@@ -13,7 +13,13 @@ step 1:
 ```
 git clone https://github.com/klestyselymay/UpBox-srv-1.0.git
 ```
+
 step 2:
+```
+cd UpBox-srv-1.0-windows
+```
+
+step 3:
 ```
 pip install -r requirements.txt
 ```
