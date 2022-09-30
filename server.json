@@ -1,0 +1,15 @@
+{
+    "commands":
+    [
+        {
+            "test": "echo hello from server"
+        }
+    ],
+
+    "colors":
+    [
+        {
+            "color": "green"
+        }
+    ]
+}
