@@ -7,7 +7,7 @@ import subprocess
 import time
 import re
 
-subprocess.call('cls', shell=True)
+subprocess.call('clear', shell=True)
 
 RESET = '\033[0m'
 def get_color_escape(r, g, b, background=False):
@@ -37,29 +37,35 @@ def listen_for_client(cs):
     while True:
         try:
             msg = cs.recv(1024).decode()
+            print(msg)
             message = msg
-            message_s = re.findall(r'\[.*?\]', message)
-            message = message.replace(f'{message_s[0]} ', '')
-            print(get_color_escape(21, 170, 13)+message_s[0],Fore.WHITE,message)
+            message_s = re.findall(r'\[.*?\]', message)[0]
+            message = message.replace(f'{message_s}=', '')
+            message = message.replace(f'{message_s} ', '')
+            print(get_color_escape(21, 170, 13)+str(message_s),Fore.WHITE,message)
             if '//' in msg:
                 cmd = msg
+                print(cmd)
                 cmd = cmd.split('=')
-                cmd_name = cmd[0].replace('//', '')
+                print(cmd)
+                cmd_name = message_s.replace('[', '').replace(']', '')
                 cmd = cmd[1]
                 if cmd in server2:
                     cmd_out = server1['commands'][0][cmd]
                     cmd_out = '/'+cmd_name+'/'+cmd_out
+                    print(cmd_out)
                     cs.send(cmd_out.encode())
-                else:
-                    cs.send(f'//{cmd_name}[SERVER] Command does not exist'.encode())
+                #else:
+                    #cs.send(f'//{cmd_name}[SERVER] Command does not exist'.encode())
 
-        except Exception as e:
-            print(f"[!] Error: {e}")
-            client_sockets.remove(cs)
-        else:
-            dsfsk = True
-        for client_socket in client_sockets:
-            client_socket.send(msg.encode())
+        # except Exception as e:
+        #     print(f"{get_color_escape(21, 170, 13)}[SERVER]{get_color_escape(255, 0, 0)} Error: {e}")
+        #     client_sockets.remove(cs)
+
+        #for client_socket in client_sockets:
+            #client_socket.send(msg.encode())
+        finally:
+            t =2
 
 while True:
     client_socket, client_address = s.accept()

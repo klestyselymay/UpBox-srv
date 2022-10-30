@@ -2,7 +2,8 @@
     "commands":
     [
         {
-            "test": "echo hello from server"
+            "init": "",
+            "test": "print('hello wolrd'); print('hi')"
         }
     ],
 
