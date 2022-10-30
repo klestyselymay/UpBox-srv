@@ -3,7 +3,7 @@
     [
         {
             "init": "",
-            "test": "print('hello wolrd'); print('hi')"
+            "test": "print('hello from server!');"
         }
     ],
 
