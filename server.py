@@ -37,7 +37,6 @@ def listen_for_client(cs):
     while True:
         try:
             msg = cs.recv(1024).decode()
-            print(msg)
             message = msg
             message_s = re.findall(r'\[.*?\]', message)[0]
             message = message.replace(f'{message_s}=', '')
@@ -58,14 +57,12 @@ def listen_for_client(cs):
                 #else:
                     #cs.send(f'//{cmd_name}[SERVER] Command does not exist'.encode())
 
-        # except Exception as e:
-        #     print(f"{get_color_escape(21, 170, 13)}[SERVER]{get_color_escape(255, 0, 0)} Error: {e}")
-        #     client_sockets.remove(cs)
+        except Exception as e:
+            print(f"{get_color_escape(21, 170, 13)}[SERVER]{get_color_escape(255, 0, 0)} Error: {e}")
+            client_sockets.remove(cs)
 
-        #for client_socket in client_sockets:
-            #client_socket.send(msg.encode())
-        finally:
-            t =2
+        for client_socket in client_sockets:
+            client_socket.send(msg.encode())
 
 while True:
     client_socket, client_address = s.accept()
