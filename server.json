@@ -1,16 +1,3 @@
 {
-    "commands":
-    [
-        {
-            "init": "",
-            "test": "print('hello from server!');"
-        }
-    ],
-
-    "colors":
-    [
-        {
-            "color": "green"
-        }
-    ]
+    "name": "server"
 }

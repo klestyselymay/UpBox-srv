@@ -1,27 +1,24 @@
-# UpBox-srv-1.0
+# UpBox-srv-2.0.3
 UpBox-srv-1.0 is a server for UpBox-1.0
 
-REQUIREMENTS: you need windows but i will release a linux verision.
+REQUIREMENTS: 
 
-python-3.10: https://www.python.org/downloads/release/python-3100/
+you need windows.
 
-UpBox-1.0: https://github.com/klestyselymay/UpBox-1.0
+[Python-3.11](https://www.python.org/downloads/release/python-3110/)
+
+[UpBox-2](https://github.com/klestyselymay/UpBox/releases)
 
 HOW TO INSTALL:
 
 step 1: 
 ```
-git clone https://github.com/klestyselymay/UpBox-srv-1.0.git
+git clone https://github.com/klestyselymay/UpBox-srv.git
 ```
 
 step 2:
 ```
-cd UpBox-srv-1.0
-```
-
-step 3:
-```
-pip install -r requirements.txt
+cd UpBox-srv
 ```
 
 HOW TO USE:
@@ -34,39 +31,7 @@ it should look like this
 
 ```json
 {
-    "commands":
-    [
-        {
-            "test": "echo hello from server"
-        }
-    ],
-
-    "colors":
-    [
-        {
-            "color": "green"
-        }
-    ]
+    "name": "server"
 }
 ```
-
-now to use custom commands check the code below
-
-```json
-{
-    "commands":
-    [
-        {
-            "test": "echo hello from server",
-            "command name": "command output"
-        }
-    ],
-
-    "colors":
-    [
-        {
-            "color": "green"
-        }
-    ]
-}
-```
+you can edit the name

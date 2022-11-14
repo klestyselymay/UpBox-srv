@@ -1,0 +1,5 @@
+{
+    "/init": "Initialize all the libraries needed",
+    "/help": "Print all the commands",
+    "/list": "See all the people online"
+}
